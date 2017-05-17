@@ -1,0 +1,11 @@
+<h1>{{this.title}}</h1>
+<ul id="unidades-list">
+	<li *ngFor="let Unidad of indicadores" class="unidades-item">
+		<h1>{{Unidad.codigo}}</h1>
+		<ul>
+			<li><em>Nombre:</em> {{ Unidad.nombre }}</li>
+			<li><em>Fecha:</em> {{ Unidad.fecha | date : 'dd/MM/yyyy hh:mm' : timezone }}</li>
+			<li><em>Valor:</em> ${{ Unidad.valor }}</li>
+		</ul>
+	</li>
+</ul>
